@@ -37,3 +37,29 @@ $(window).on('resize', function(){
 $(".navbar-toggler").click(function(){
   setTimeout(function(){ test(); });
 });
+
+//page generation
+
+$(document).ready(function() {
+  PageLoad();
+});
+
+function PageLoad(){
+  page = sessionStorage.getItem("page");
+  if(!page) page = "Home";
+  $("li > a:contains("+page+")").parent().addClass('active');
+
+  $.ajax({
+    url: "/",
+    type: 'GET',
+    data: {__a:page},
+    success: function(resultData) { $("#main").html(resultData) }
+  });
+}
+
+
+$('#navmenu li a').click(function(e) 
+  { 
+      sessionStorage.setItem("page", $(this).text());
+      PageLoad();
+  });

@@ -1,4 +1,4 @@
-{% load static %}
+
 <header>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -8,7 +8,7 @@
             </ol>
             <div class="carousel-inner" role="listbox">
             <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item active" style="background-image: url('{% static 'images/web.jpeg' %}')">
+            <div class="carousel-item active" style="background-image: url('{% static 'images/web.png' %}')">
                 <div class="carousel-caption d-none d-md-block">
                 <h2 class="display-4">Web Application</h2>
                 <p class="lead">All types of static and dyanamic web pages.</p>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <!-- Slide Three - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('{% static 'images/system.png' %}')">
+            <div class="carousel-item" style="background-image: url('{% static 'images/system.jpeg' %}')">
                 <div class="carousel-caption d-none d-md-block">
                 <h2 class="display-4">System Application</h2>
                 <p class="lead">All platform applications are made here.</p>
@@ -39,42 +39,3 @@
                 </a>
         </div>
     </header>
-
-    <div class="container-fluid p-3 text-black" style="background:#eef2f2;">
-        <h1>We do what you love</h1>
-        <p>Website and apps are created by us for better user xperince.</p>
-    </div>
-
-    <div class="container-fluid p-3 bg-white text-black">
-        <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'images/Android.svg' %}" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Android</h5>
-                <p class="card-text">This is a major platform used all over the india.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{% static 'images/windows.png' %}" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Windows</h5>
-                <p class="card-text">This is the traditional platflorm for most of the world.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{% static 'images/Apple.png' %}" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Mac</h5>
-                <p class="card-text">The wild user platform of security and cost.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid p-3 text-black" style="background:#eef2f2;">
-    <h1>All client testimonie are welcomed</h1>
-    <p>the tcs company has appreciated for projects .</p>
-    </div>
