@@ -47,8 +47,19 @@ $(document).ready(function() {
 function PageLoad(){
   page = sessionStorage.getItem("page");
   if(!page) page = "Home";
-  $("li > a:contains("+page+")").parent().addClass('active');
-
+    $('#navbarSupportedContent ul li').removeClass("active");
+    var activeWidthNewAnimHeight = $($("li > a:contains("+page+")").parent()).innerHeight();
+    var activeWidthNewAnimWidth = $($("li > a:contains("+page+")").parent()).innerWidth();
+    var itemPosNewAnimTop = $($("li > a:contains("+page+")").parent()).position();
+    var itemPosNewAnimLeft = $($("li > a:contains("+page+")").parent()).position();
+    $(".hori-selector").css({
+      "top":itemPosNewAnimTop.top + "px", 
+      "left":itemPosNewAnimLeft.left + "px",
+      "height": activeWidthNewAnimHeight + "px",
+      "width": activeWidthNewAnimWidth + "px"
+    });
+  
+    $("li > a:contains("+page+")").parent().addClass('active');
   $.ajax({
     url: "/",
     type: 'GET',
