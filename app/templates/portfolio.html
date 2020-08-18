@@ -193,7 +193,10 @@ body {
 </style>
 <body>
   <div class="container">
-
+    <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Marketing has always been about the same thing—who your customers are and where they are.</p>
+        </div>
     <ul id="filters" class="clearfix">
       <li><span class="filter active" data-filter=".app, .node, .py, .system, .web">All</span></li>
       <li><span class="filter" data-filter=".app">App</span></li>
@@ -539,7 +542,7 @@ body {
               filter: '.filter'
             },
             load: {
-              filter: '.app'
+              filter: '.app, .node, .py, .system, .web'
             }
           });
 

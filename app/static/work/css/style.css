@@ -51,7 +51,7 @@ a {
   -webkit-transition: 0.2s all ease-in-out !important;
   -o-transition: 0.2s all ease-in-out !important;
   transition: 0.2s all ease-in-out !important;
-  top: 0;
+  /*top: 0;*/
   font-size: 12px;
   padding-top: 20px;
   padding-bottom: 20px; }
