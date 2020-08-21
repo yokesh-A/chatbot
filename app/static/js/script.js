@@ -1,7 +1,4 @@
-function page(pagetitle){
-  sessionStorage.setItem("page", pagetitle);
-    PageLoad();
-}
+
 // ---------Responsive-navbar-active-animation-----------
 function test(){
   var tabsNewAnim = $('#navbarSupportedContent');
@@ -104,8 +101,8 @@ $('#navmenu li a').click(function(e)
       url: "/",
       type: 'GET',
       data: {__a:"Chatbot",msg:msg},
-      success: function(data) {generate_message(data, 'user'); },
-      error: function (error) { generate_message("i can't able to connect my network Please check your connection", 'user'); }
+      success: function(data) {generate_message(data, 'user');},
+      error: function (error) { generate_message("i can't able to connect my network Please check your connection", 'user');}
       });
       //setTimeout(function() {      
       //  generate_message(reply, 'user');  

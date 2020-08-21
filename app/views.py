@@ -31,8 +31,9 @@ def index(request):
 def getreply(data):
     message = data.lower()
     reply = []
+    lib = dictionary
 
-    ai = dictionary.objects.all()
+    ai = lib.objects.all()
     for row in ai:
         if row.keys.strip():
             keys = row.keys.split()
@@ -43,13 +44,13 @@ def getreply(data):
                 else:
                     chk = chk*0
             if chk > 0:
-                reply.append(row.answer)
+                reply.append(row.answer+"<script>"+row.control+"</script>")
                 row.usage = row.usage+1
                 row.save()
 
 
     if reply == []:
         reply.append("sorry Unable to understand")
-        msg = dictionary(question=message)
+        msg = lib(question=message)
         msg.save()
     return " ".join(reply)
